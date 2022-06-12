@@ -1,4 +1,33 @@
 ﻿//array length input
+int GetNumberInput()
+{
+    return 1;
+}
+
+char getCharacterInput()
+{
+    return 'e';
+}
+
+string[] populateWordArray(int length)
+{
+    return new string[length];
+}
+
+int countCharacters(string[] words, char charToCount)
+{
+    return 1;
+}
+
+int getCharacterOccurencePercentage(string[] words, char charToCount)
+{
+    return 1;
+}
+
+void printResults(char countedCharacter, int charFrequency, int charPercentage, int totalChars)
+{
+
+}
 Console.WriteLine("Please specify how many words you're inputting.");
 int arrLength = Convert.ToInt32(Console.ReadLine());
 //loop to take words to put into the array
