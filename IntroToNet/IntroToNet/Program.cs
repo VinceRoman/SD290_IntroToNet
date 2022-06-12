@@ -1,79 +1,80 @@
-﻿//array length input
-int GetNumberInput()
+﻿
+int getNumberInput()//array length input
 {
-    return 1;
-}
-
-char getCharacterInput()
-{
-    return 'e';
+    Console.WriteLine("Please specify how many words you're inputting.");
+    return Convert.ToInt32(Console.ReadLine());
 }
 
 string[] populateWordArray(int length)
 {
-    return new string[length];
+    string[] wordsArray = new string[length];
+
+    for (int i = 0; i < length; i++)//loop to take words to put into the array
+    {
+        wordsArray[i] = Convert.ToString(Console.ReadLine());
+        Console.WriteLine("Word inputted: " + wordsArray[i]);
+    }
+
+    return wordsArray;
 }
 
-int countCharacters(string[] words, char charToCount)
+char getCharacterInput()//inputting a character, storing it, and searching for it in the array.
 {
-    return 1;
+    Console.WriteLine("Now, type in a letter to search for in the arrays.");
+    return Convert.ToChar(Console.ReadLine());
+}
+
+int countCharacters(string[] words, char charToCount)//count how many times the searched letter appears in the whole array
+{
+    int counter = 0;
+
+    for (int wordIndex = 0; wordIndex < words.Length; wordIndex++)
+    {//the first layer will iterate through the array and add it into the char array
+        char[] charArray = words[wordIndex].ToCharArray();
+
+        for (int charIndex = 0; charIndex < charArray.Length; charIndex++)
+        {//the second layer will iterate through each word's char
+            if (charArray[charIndex] == charToCount)
+            {
+                counter++;
+            }
+            Console.WriteLine(charArray[charIndex]);
+        }
+    }
+
+    return counter;
 }
 
 int getCharacterOccurencePercentage(string[] words, char charToCount)
 {
-    return 1;
+
+    int lettersTotal = words.Length;
+    int searchCharAmnt = countCharacters(words, charToCount);
+
+    double percentage = (double)searchCharAmnt / lettersTotal;
+
+    percentage *= 100;
+
+    return Convert.ToInt32(percentage);
 }
 
 void printResults(char countedCharacter, int charFrequency, int charPercentage, int totalChars)
 {
-
-}
-Console.WriteLine("Please specify how many words you're inputting.");
-int arrLength = Convert.ToInt32(Console.ReadLine());
-//loop to take words to put into the array
-Console.WriteLine("Please input words to put into the array.");
-
-string[] wordsArray = new string[arrLength];
-
-for (int i = 0; i < arrLength; i++)
-{
-    wordsArray[i] = Convert.ToString(Console.ReadLine());
-    Console.WriteLine("Word inputted: " + wordsArray[i]);
+    Console.WriteLine($"The letter: {countedCharacter} appears {charFrequency} times in the array. This letter makes up more than {charPercentage}% of the total number of characters ({totalChars})");
 }
 
-//count the letters in the array entirely
-int letters = 0;
+int arrLength = getNumberInput();
+string[] wordsArray = populateWordArray(arrLength);
+char charToSearch = getCharacterInput();
+int percentage = getCharacterOccurencePercentage(wordsArray, charToSearch);
 
-for (int i = 0; i < wordsArray.Length; i++)
-{
-    letters += wordsArray[i].Length;
-    Console.WriteLine(letters);
-}
+printResults(charToSearch, countCharacters(wordsArray, charToSearch), percentage, wordsArray.Length);
 
+
+
+/*
 //inputting a character, storing it, and searching for it in the array.
 Console.WriteLine("Now, type in a letter to search for in the arrays.");
-
-int counter = 0;
 char searchLetter = Convert.ToChar(Console.ReadLine());
-
 Console.WriteLine("Char inputted: " + searchLetter);
-
-for (int wordIndex = 0; wordIndex < wordsArray.Length; wordIndex++)
-{//the first layer will iterate through the array and add it into the char array
-    char[] charArray = wordsArray[wordIndex].ToCharArray();
-
-    for (int charIndex = 0; charIndex < charArray.Length; charIndex++)
-    {//the second layer will iterate through each word's char
-        if(charArray[charIndex] == searchLetter)
-        {
-            counter++;
-        }
-        Console.WriteLine(charArray[charIndex]);
-    }
-}
-
-double percentage = (double)counter/letters;
-
-percentage *= 100;
-
-Console.WriteLine($"The letter: {searchLetter} appears {counter} times in the array. This letter makes up more than {percentage}% of the total number of characters");
+*/
