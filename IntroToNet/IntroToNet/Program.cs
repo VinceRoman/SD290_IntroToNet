@@ -7,6 +7,7 @@ int getNumberInput()//array length input
 
 string[] populateWordArray(int length)
 {
+    Console.WriteLine("Input the words you want.");
     string[] wordsArray = new string[length];
 
     for (int i = 0; i < length; i++)//loop to take words to put into the array
@@ -38,7 +39,6 @@ int countCharacters(string[] words, char charToCount)//count how many times the 
             {
                 counter++;
             }
-            Console.WriteLine(charArray[charIndex]);
         }
     }
 
@@ -48,7 +48,7 @@ int countCharacters(string[] words, char charToCount)//count how many times the 
 int getCharacterOccurencePercentage(string[] words, char charToCount)
 {
 
-    int lettersTotal = words.Length;
+    int lettersTotal = countTotalChars(words);
     int searchCharAmnt = countCharacters(words, charToCount);
 
     double percentage = (double)searchCharAmnt / lettersTotal;
@@ -56,6 +56,20 @@ int getCharacterOccurencePercentage(string[] words, char charToCount)
     percentage *= 100;
 
     return Convert.ToInt32(percentage);
+}
+
+int countTotalChars(string[] words)
+{
+    int counter = 0;
+
+    for(int i = 0; i < words.Length; i++)
+    {
+        counter += words[i].Length;//add each individual word's length to the counter
+    }
+
+    Console.WriteLine("Total chars = " + counter);
+
+    return counter;
 }
 
 void printResults(char countedCharacter, int charFrequency, int charPercentage, int totalChars)
@@ -68,7 +82,7 @@ string[] wordsArray = populateWordArray(arrLength);
 char charToSearch = getCharacterInput();
 int percentage = getCharacterOccurencePercentage(wordsArray, charToSearch);
 
-printResults(charToSearch, countCharacters(wordsArray, charToSearch), percentage, wordsArray.Length);
+printResults(charToSearch, countCharacters(wordsArray, charToSearch), percentage, countTotalChars(wordsArray));
 
 
 
