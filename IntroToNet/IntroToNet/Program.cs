@@ -83,12 +83,3 @@ char charToSearch = getCharacterInput();
 int percentage = getCharacterOccurencePercentage(wordsArray, charToSearch);
 
 printResults(charToSearch, countCharacters(wordsArray, charToSearch), percentage, countTotalChars(wordsArray));
-
-
-
-/*
-//inputting a character, storing it, and searching for it in the array.
-Console.WriteLine("Now, type in a letter to search for in the arrays.");
-char searchLetter = Convert.ToChar(Console.ReadLine());
-Console.WriteLine("Char inputted: " + searchLetter);
-*/
