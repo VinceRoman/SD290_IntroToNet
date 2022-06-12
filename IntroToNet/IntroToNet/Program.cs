@@ -18,7 +18,7 @@ bool isPalindrome(string inputWord)
 
     for (int index = 0; index < charArray.Length; index++)
     {
-        if (charArray[index] != charArray[reverseIndex])
+        if (charArray[index] != charArray[reverseIndex])//if one letter is off it will invalidate the whole thing.
         {
             isValid = false;
         }
@@ -34,4 +34,33 @@ bool isPalindrome(string inputWord)
     {
         return false;
     }
+}
+
+duplicateCharacters("Programmatic Python");
+
+char[] duplicateCharacters (string testString)
+{
+    char[] charArray = testString.ToCharArray();
+    char[] outArray  = new char[charArray.Length];
+
+    //selects a char then compares it to the entire sentence, if there's more than one duplicate, it adds to the new array.
+    for (int i = 0; i < charArray.Length; i++)
+    {
+        char searchItem = charArray[i];
+        for(int j = 0; j < charArray.Length; j++)
+        {
+            if(searchItem == charArray[j] && j != i)//prevent it from being on the same index
+            {
+                Console.WriteLine(searchItem +" :is equal to: "+ charArray[j]);
+                outArray[i] = searchItem;
+            }
+        }
+    }
+
+    foreach(char element in outArray)
+    {
+        Console.WriteLine(element);
+    }
+
+    return outArray;
 }
