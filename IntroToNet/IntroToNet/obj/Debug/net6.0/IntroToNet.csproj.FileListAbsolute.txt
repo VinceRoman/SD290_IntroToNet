@@ -1,0 +1,15 @@
+C:\Users\vince\source\repos\SD290_IntroToNet\IntroToNet\IntroToNet\bin\Debug\net6.0\IntroToNet.exe
+C:\Users\vince\source\repos\SD290_IntroToNet\IntroToNet\IntroToNet\bin\Debug\net6.0\IntroToNet.deps.json
+C:\Users\vince\source\repos\SD290_IntroToNet\IntroToNet\IntroToNet\bin\Debug\net6.0\IntroToNet.runtimeconfig.json
+C:\Users\vince\source\repos\SD290_IntroToNet\IntroToNet\IntroToNet\bin\Debug\net6.0\IntroToNet.dll
+C:\Users\vince\source\repos\SD290_IntroToNet\IntroToNet\IntroToNet\bin\Debug\net6.0\IntroToNet.pdb
+C:\Users\vince\source\repos\SD290_IntroToNet\IntroToNet\IntroToNet\obj\Debug\net6.0\IntroToNet.csproj.AssemblyReference.cache
+C:\Users\vince\source\repos\SD290_IntroToNet\IntroToNet\IntroToNet\obj\Debug\net6.0\IntroToNet.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vince\source\repos\SD290_IntroToNet\IntroToNet\IntroToNet\obj\Debug\net6.0\IntroToNet.AssemblyInfoInputs.cache
+C:\Users\vince\source\repos\SD290_IntroToNet\IntroToNet\IntroToNet\obj\Debug\net6.0\IntroToNet.AssemblyInfo.cs
+C:\Users\vince\source\repos\SD290_IntroToNet\IntroToNet\IntroToNet\obj\Debug\net6.0\IntroToNet.csproj.CoreCompileInputs.cache
+C:\Users\vince\source\repos\SD290_IntroToNet\IntroToNet\IntroToNet\obj\Debug\net6.0\IntroToNet.dll
+C:\Users\vince\source\repos\SD290_IntroToNet\IntroToNet\IntroToNet\obj\Debug\net6.0\refint\IntroToNet.dll
+C:\Users\vince\source\repos\SD290_IntroToNet\IntroToNet\IntroToNet\obj\Debug\net6.0\IntroToNet.pdb
+C:\Users\vince\source\repos\SD290_IntroToNet\IntroToNet\IntroToNet\obj\Debug\net6.0\IntroToNet.genruntimeconfig.cache
+C:\Users\vince\source\repos\SD290_IntroToNet\IntroToNet\IntroToNet\obj\Debug\net6.0\ref\IntroToNet.dll
